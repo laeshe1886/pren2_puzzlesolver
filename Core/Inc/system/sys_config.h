@@ -48,13 +48,6 @@
  * PISTON
  * ========================================================================== */
 
-<<<<<<< Updated upstream
-#define CONFIG_PISTON_TIME_RETRACT_INIT_MS 1000u /* ms — retract from unknown \
-                                                  */
-#define CONFIG_PISTON_TIME_START_MOVE_MS 500u    /* ms — START → MOVE         */
-#define CONFIG_PISTON_TIME_MOVE_GRAB_MS 500u     /* ms — MOVE ↔ GRAB          */
-#define CONFIG_PISTON_TIME_MOVE_RELEASE_MS 500u  /* ms — MOVE ↔ RELEASE */
-=======
 #define CONFIG_PISTON_TIME_RETRACT_INIT_MS \
   800u /* ms — retract from unknown      \
         */
@@ -67,7 +60,6 @@
 #define PISTON_OFFSET_MOVE_MS 100u
 #define PISTON_OFFSET_GRAB_MS 400u
 #define PISTON_OFFSET_RELEASE_MS 500u
->>>>>>> Stashed changes
 
 /* Derived tick counts — do not edit.
  * Result fits in int32_t: max = 120000 * 2000 / 1000 = 240000 << INT32_MAX  */
@@ -217,15 +209,9 @@
  * ========================================================================== */
 
 /* Speeds as fraction of cruise speed */
-<<<<<<< Updated upstream
-#define CONFIG_HOMING_COARSE_SPEED_MM_S 20UL  /* fast search          */
-#define CONFIG_HOMING_FINE_SPEED_MM_S 3UL     /* slow precise touch   */
-#define CONFIG_HOMING_BACKOFF_SPEED_MM_S 10UL /* retreat              */
-=======
 #define CONFIG_HOMING_COARSE_SPEED_MM_S 40UL  /* fast search          */
 #define CONFIG_HOMING_FINE_SPEED_MM_S 10UL    /* slow precise touch   */
 #define CONFIG_HOMING_BACKOFF_SPEED_MM_S 20UL /* retreat              */
->>>>>>> Stashed changes
 #define CONFIG_HOMING_BACKOFF_DIST_MM 5UL     /* retreat distance     */
 
 /* Derived: ticks between steps (= ISR interval) */

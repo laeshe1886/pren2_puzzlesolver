@@ -93,12 +93,7 @@ void StateMachine_Update(void) {
       if (Buttons_Start_Pressed()) {
         Buttons_Start_RearmPressDetection();
         /* Signal the PC that the system is mechanically ready */
-<<<<<<< Updated upstream
-        /* TODO: how to start the algorithm? */
-        /* CommandDispatcher_SendAck(sm_dispatcher, Status_STATUS_READY, 0);*/
-=======
         CommandDispatcher_SendAck(sm_dispatcher, Status_STATUS_READY, 0);
->>>>>>> Stashed changes
         current_state = SM_IDLE;
       }
       break;
@@ -229,8 +224,6 @@ void StateMachine_Update(void) {
         }
       }
       break;
-<<<<<<< Updated upstream
-=======
   }
 
   /* --- Manual control for CLI testing --- */
@@ -242,6 +235,5 @@ void StateMachine_Update(void) {
     if (current_puzzle.pieces_count > 0) {
       current_state = SM_CALC_TO_PICK;
     }
->>>>>>> Stashed changes
   }
 }

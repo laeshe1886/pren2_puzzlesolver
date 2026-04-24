@@ -190,12 +190,7 @@ void Sys_Init(void) {
   /*
   UartReceiver_Init(&uart_receiver, &huart5);
   CommandDispatcher_Init(&command_dispatcher, &uart_receiver);
-<<<<<<< Updated upstream
-  UartReceiver_Start(&uart_receiver);
-  HAL_TIM_Base_Init(&htim2);
-=======
   UartReceiver_Start(&uart_receiver);*/
->>>>>>> Stashed changes
 }
 
 UartReceiver_t* Sys_GetUartReceiver(void) { return &uart_receiver; }
