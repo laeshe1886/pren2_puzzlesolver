@@ -19,11 +19,16 @@ void LimitSwitch_Init(GPIO_Pin_t x_min,
 uint32_t LimitSwitch_Activated(void) {
   uint32_t lim = 0;
   if (HAL_GPIO_ReadPin(LimitSwitch_Pins.limit[0].port,
+<<<<<<< Updated upstream
                        LimitSwitch_Pins.limit[0].pin)) {
+=======
+                       LimitSwitch_Pins.limit[0].pin) == GPIO_PIN_SET) {
+>>>>>>> Stashed changes
     lim |= LIM_X_MIN;
   }
 
   if (HAL_GPIO_ReadPin(LimitSwitch_Pins.limit[1].port,
+<<<<<<< Updated upstream
                        LimitSwitch_Pins.limit[1].pin)) {
     lim |= LIM_X_MAX;
   }
@@ -33,6 +38,17 @@ uint32_t LimitSwitch_Activated(void) {
   }
   if (HAL_GPIO_ReadPin(LimitSwitch_Pins.limit[3].port,
                        LimitSwitch_Pins.limit[3].pin)) {
+=======
+                       LimitSwitch_Pins.limit[1].pin) == GPIO_PIN_SET) {
+    lim |= LIM_X_MAX;
+  }
+  if (HAL_GPIO_ReadPin(LimitSwitch_Pins.limit[2].port,
+                       LimitSwitch_Pins.limit[2].pin) == GPIO_PIN_SET) {
+    lim |= LIM_Y_MIN;
+  }
+  if (HAL_GPIO_ReadPin(LimitSwitch_Pins.limit[3].port,
+                       LimitSwitch_Pins.limit[3].pin) == GPIO_PIN_SET) {
+>>>>>>> Stashed changes
     lim |= LIM_Y_MAX;
   }
 
